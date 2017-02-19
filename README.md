@@ -135,4 +135,6 @@ i) The pipeline used in the current project is very specific to the project vide
 
 ii) Removing False positives was the biggest challenge for me. There are still some False positives in the resultant video. the pipeline needs to be improved further.
 
-iii) Also, Deep Learning approach could result in a more general solution. 
+iii) Weighted moving average filter can be used to further reduce flickering in the video.
+
+iv) Also, Deep Learning approach could result in a more general solution. 
