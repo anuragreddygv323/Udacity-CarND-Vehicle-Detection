@@ -83,6 +83,12 @@ After several round of trial and error, the following are the parameters chosen 
           c) Y Start Stop - (400, 550)
           d) Overlap - (0.85, 0.85)
           
+  v) All the windows obtained from above step are then passed to ***search_windows()*** present in **cell no. - 18 of vehicle_detection.ipynb** to get the actual hot boxes using prediction from SVC classifier. The classifier is used to predict the probability of a car being present in the image. If probability is greater than 0.5 then, car is present in the image.
+  
+  vi) Then a heatmap is created using the hot boxes from above step. ***add_heat()*** function present in **cell no. - 20 of vehicle_detection.ipynb** is used. +1 value is added to all the boxes obtained from above step. After that ***apply_threshold()*** function present in **cell no. - 20 of vehicle_detection.ipynb** is called to remove some of the false positives present.
+  
+  vii) ***label()*** function from ***scipy.ndimage.measurements*** helps in labelling the thresolding regions from the above step. After that ***draw_labeled_bboxes()*** function present in **cell no. - 21 of vehicle_detection.ipynb** is called to draw bouding box around the detected car.
+          
   
 #### 2. Show some examples of test images to demonstrate how your pipeline is working. What did you do to try to minimize false positives and reliably detect cars?
 
@@ -95,3 +101,11 @@ Image Pipeline for test image :-
 Heatmaps                   |  Labeled Boxes               
 :-------------------------:|:-------------------------:
 ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/heatmap.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/final_box.jpg)
+
+To remove False positives :-
+
+i) In ***draw_labeled_bboxes()*** function in **cell no. - 21 of vehicle_detection.ipynb**, I check whether the minimum y-coordinate values is in between 300 and 600. If not, then don't draw the box. Also, minimum x-coordinate value should be less than 1220. One more check of the area of the box has beeen used to remove small False positve boxes. If the area of the box is less than 2500, then don't draw it.
+
+ii) Use of SVC with probabilitic prediction instead of normal LinearSVC also helped in removing many False positives. 
+
+iii) As mentioned in the previous question, heatmaps and thresholding on those heatmaps also help us in removing False positives.
