@@ -54,7 +54,7 @@ After several round of trial and error, the following are the parameters chosen 
 
 #### 1. Describe how (and identify where in your code) you implemented a sliding window search. How did you decide what scales to search and how much to overlap windows?
 
-  i) There are some helper function for sliding window search present in **cell no. - 17, 18, 20, 21 of vehicle_detection.ipynb**.
+  i) There are some helper functions for sliding window search present in **cell no. - 17, 18, 20, 21 of vehicle_detection.ipynb**.
   
   ii) The ***image_pipeline()*** function present in **cell no. - 22 of vehicle_detection.ipynb** contains the whole implementation.
   
