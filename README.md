@@ -16,7 +16,19 @@ This project is part of Udacity's Self-Driven Car Nanodegree Program. The aim is
 
   iii) ***get_hog_features()*** function in **cell no. - 8 of vehicle_detection.ipynb** helps us to get the hog features of an image. Features extracted from each color channels are appended and  ***np.ravel()*** is used to return 1-D array of features of all the color channels.
   
-  iv) After several round of trial and error, the following are the parameters chosen for HOG, Spatial Bins and Color Histograms:-
+  
+   Original Image          |  HOG of Color Channel R               
+:-------------------------:|:-------------------------:
+![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/original.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_r.jpg) 
+
+HOG of Color Channel G     |  HOG of Color Channel B               
+:-------------------------:|:-------------------------:
+![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_g.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_b.jpg) 
+
+
+#### 2. Explain how you settled on your final choice of HOG parameters.
+
+After several round of trial and error, the following are the parameters chosen for HOG, Spatial Bins and Color Histograms:-
       
       a) Color Channel - RGB
       b) Orientation bins - 8
@@ -27,13 +39,3 @@ This project is part of Udacity's Self-Driven Car Nanodegree Program. The aim is
       g) Spatial Image Size - (16, 16)
       
   These parameters are present in **cell no. - 5 of vehicle_detection.ipynb**.
-  
-  
-   Original Image          |  HOG of Color Channel R               
-:-------------------------:|:-------------------------:
-![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/original.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_r.jpg) 
-
-HOG of Color Channel G     |  HOG of Color Channel B               
-:-------------------------:|:-------------------------:
-![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_g.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_b.jpg) 
-      
