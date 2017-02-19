@@ -85,3 +85,13 @@ After several round of trial and error, the following are the parameters chosen 
           
   
 #### 2. Show some examples of test images to demonstrate how your pipeline is working. What did you do to try to minimize false positives and reliably detect cars?
+
+Image Pipeline for test image :-
+
+   Original Image          |  Sliding Windows               
+:-------------------------:|:-------------------------:
+![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/original.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/sliding_windows.jpg) 
+
+Heatmaps                   |  Labeled Boxes               
+:-------------------------:|:-------------------------:
+![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/heatmap.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/final_box.jpg)
