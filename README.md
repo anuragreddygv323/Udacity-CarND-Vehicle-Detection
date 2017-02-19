@@ -87,7 +87,7 @@ After several round of trial and error, the following are the parameters chosen 
   
   vi) Then a heatmap is created using the hot boxes from above step. ***add_heat()*** function present in **cell no. - 20 of vehicle_detection.ipynb** is used. +1 value is added to all the boxes obtained from above step. After that ***apply_threshold()*** function present in **cell no. - 20 of vehicle_detection.ipynb** is called to remove some of the false positives present.
   
-  vii) ***label()*** function from ***scipy.ndimage.measurements*** helps in labelling the thresolding regions from the above step. After that ***draw_labeled_bboxes()*** function present in **cell no. - 21 of vehicle_detection.ipynb** is called to draw bouding box around the detected car.
+  vii) ***label()*** function from ***scipy.ndimage.measurements*** helps in labelling the thresholding regions from the above step. After that ***draw_labeled_bboxes()*** function present in **cell no. - 21 of vehicle_detection.ipynb** is called to draw bounding box around the detected car.
           
   
 #### 2. Show some examples of test images to demonstrate how your pipeline is working. What did you do to try to minimize false positives and reliably detect cars?
