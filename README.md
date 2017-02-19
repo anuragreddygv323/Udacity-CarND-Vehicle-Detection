@@ -12,7 +12,7 @@ This project is part of Udacity's Self-Driven Car Nanodegree Program. The aim is
 
   i) ***hog()*** function from ***skimage.feature*** is used for extracting hog features.
   
-  ii) hog features are extracted individually for each of the color channels.
+  ii) hog features are extracted individually from each of the color channels.
 
   iii) ***get_hog_features()*** function in **cell no. - 8 of vehicle_detection.ipynb** helps us to get the hog features of an image. Features extracted from each color channels are appended and  ***np.ravel()*** is used to return 1-D array of features of all the color channels.
   
