@@ -124,7 +124,7 @@ project_video_result.mp4 present in the github repository is the same video as t
 
 Method used for removing False positive has been answered in 2nd question of **Sliding Window Search** heading.
 
-Bounding boxes obtained in image pipeline in each frame were flickering a lot. So, to reduce the flickering **Exponential Smoothening** has been used. It's implementation is present in ** cell no. - 22 of vehicle_detection.ipynb** inside ***image_pipeline()*** function. Heatmaps obtained from previous frame is given weightage of **0.2** and heatmaps from current frame are given weightage of **0.8**. These two values were obtained experimentally. 
+Bounding boxes obtained in image pipeline in each frame were flickering a lot. So, to reduce the flickering **Exponential Smoothening** has been used. It's implementation is present in **cell no. - 22 of vehicle_detection.ipynb** inside ***image_pipeline()*** function. Heatmaps obtained from previous frame is given weightage of **0.2** and heatmaps from current frame are given weightage of **0.8**. This is the way in which we decide the heatmap for current frame. These two values were obtained experimentally. 
 
 
 ## Discussion
