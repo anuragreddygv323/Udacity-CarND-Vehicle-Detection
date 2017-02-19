@@ -27,4 +27,13 @@ This project is part of Udacity's Self-Driven Car Nanodegree Program. The aim is
       g) Spatial Image Size - (16, 16)
       
   These parameters are present in **cell no. - 5 of vehicle_detection.ipynb**.
+  
+  
+   Original Image          |  HOG of Color Channel R               
+:-------------------------:|:-------------------------:
+![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/original.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_r.jpg) 
+
+HOG of Color Channel G     |  HOG of Color Channel B               
+:-------------------------:|:-------------------------:
+![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_g.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_b.jpg) 
       
