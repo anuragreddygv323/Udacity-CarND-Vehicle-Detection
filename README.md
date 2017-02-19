@@ -47,4 +47,51 @@ After several round of trial and error, the following are the parameters chosen 
   
   ii) The implementation is present in **cell no. - 15, 16 of vehicle_detection.ipynb**.
   
-  iii) Accuracy Percentage - ** 99.53% **
+  iii) Accuracy Percentage - **99.53%**
+
+
+## Sliding Window Search
+
+#### 1. Describe how (and identify where in your code) you implemented a sliding window search. How did you decide what scales to search and how much to overlap windows?
+
+  i) There are some helper function for sliding window search present in **cell no. - 17, 18, 20, 21 of vehicle_detection.ipynb**.
+  
+  ii) The ***image_pipeline()*** function present in **cell no. - 22 of vehicle_detection.ipynb** contains the whole implementation.
+  
+  iii) Coming up with parameters involved extensive trail and error. Also, there is no fixed single answer. Different configurations can be used to build the pipeline.
+  
+  iv) Three different window sizes were selected. 
+      
+  For small windows :-
+     
+          a) Window Size - (64, 64)
+          b) X Start Stop - (640, 1280)
+          c) Y Start Stop - (300, 450)
+          d) Overlap - (0.6, 0.6)
+          
+  For medium windows :-
+     
+          a) Window Size - (96, 96)
+          b) X Start Stop - (640, 1280)
+          c) Y Start Stop - (300, 500)
+          d) Overlap - (0.8, 0.8)
+          
+  For large windows :-
+     
+          a) Window Size - (128, 128)
+          b) X Start Stop - (640, 1280)
+          c) Y Start Stop - (400, 550)
+          d) Overlap - (0.85, 0.85)
+          
+  
+#### 2. Show some examples of test images to demonstrate how your pipeline is working. What did you do to try to minimize false positives and reliably detect cars?
+
+Image Pipeline for test image :-
+
+   Original Image          |  Sliding Windows               
+:-------------------------:|:-------------------------:
+![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/original.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/sliding_windows.jpg) 
+
+Heatmaps                   |  Labeled Boxes               
+:-------------------------:|:-------------------------:
+![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/heatmap.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/final_box.jpg)
