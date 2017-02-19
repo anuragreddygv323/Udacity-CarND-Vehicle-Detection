@@ -109,3 +109,30 @@ i) In ***draw_labeled_bboxes()*** function in **cell no. - 21 of vehicle_detecti
 ii) Use of SVC with probabilitic prediction instead of normal LinearSVC also helped in removing many False positives. 
 
 iii) As mentioned in the previous question, heatmaps and thresholding on those heatmaps also help us in removing False positives.
+
+
+## Video Implementation
+
+#### 1. Provide a link to your final video output. Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
+
+[Video Link](https://www.youtube.com/watch?v=T5zU5MmVTu4)
+
+project_video_result.mp4 present in the github repository is the same video as that of youtube.
+
+
+#### 2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
+
+Method used for removing False positive has been answered in 2nd question of **Sliding Window Search** heading.
+
+Bounding boxes obtained in image pipeline in each frame were flickering a lot. So, to reduce the flickering **Exponential Smoothening** has been used. It's implementation is present in ** cell no. - 22 of vehicle_detection.ipynb** inside ***image_pipeline()*** function. Heatmaps obtained from previous frame is given weightage of **0.2** and heatmaps from current frame are given weightage of **0.8**. These two values were obtained experimentally. 
+
+
+## Discussion
+
+#### Briefly discuss any problems / issues you faced in your implementation of this project. Where will your pipeline likely fail? What could you do to make it more robust?
+
+i) The pipeline used in the current project is very specific to the project video. All the different parameters have been tuned keeping that fact in mind. There is a need for generlistic approach.
+
+ii) Removing False positives was the biggest challenge for me. There are still some False positives in the resultant video. the pipeline needs to be improved further.
+
+iii) Also, Deep Learning approach could result in a more general solution. 
