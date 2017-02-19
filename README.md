@@ -62,21 +62,21 @@ After several round of trial and error, the following are the parameters chosen 
   
   iv) Three different window sizes were selected. 
       
-     For small windows :-
+  For small windows :-
      
           a) Window Size - (64, 64)
           b) X Start Stop - (640, 1280)
           c) Y Start Stop - (300, 450)
           d) Overlap - (0.6, 0.6)
           
-     For medium windows :-
+  For medium windows :-
      
           a) Window Size - (96, 96)
           b) X Start Stop - (640, 1280)
           c) Y Start Stop - (300, 500)
           d) Overlap - (0.8, 0.8)
           
-     For large windows :-
+  For large windows :-
      
           a) Window Size - (128, 128)
           b) X Start Stop - (640, 1280)
