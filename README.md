@@ -1,33 +1,50 @@
-# Vehicle Detection
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+# Udacity-CarND-Vehicle-Detection
+
+# About
+
+This project is part of Udacity's Self-Driven Car Nanodegree Program. The aim is to develop a pipeline which tracks the cars detected along the lanes.
+
+# Rubric Points
+
+## Histogram of Oriented Gradients (HOG)
+
+#### 1. Explain how (and identify where in your code) you extracted HOG features from the training images. Explain how you settled on your final choice of HOG parameters.
+
+  i) ***hog()*** function from ***skimage.feature*** is used for extracting hog features.
+  
+  ii) hog features are extracted individually for each of the color channels.
+
+  iii) ***get_hog_features()*** function in **cell no. - 8 of vehicle_detection.ipynb** helps us to get the hog features of an image. Features extracted from each color channels are appended and  ***np.ravel()*** is used to return 1-D array of features of all the color channels.
+  
+  
+   Original Image          |  HOG of Color Channel R               
+:-------------------------:|:-------------------------:
+![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/original.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_r.jpg) 
+
+HOG of Color Channel G     |  HOG of Color Channel B               
+:-------------------------:|:-------------------------:
+![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_g.jpg)  |  ![](https://github.com/imindrajit/Udacity-CarND-Vehicle-Detection/blob/master/output_images/test1/hog_channel_b.jpg) 
 
 
-In this project, your goal is to write a software pipeline to detect vehicles in a video (start with the test_video.mp4 and later implement on full project_video.mp4), but the main output or product we want you to create is a detailed writeup of the project.  Check out the [writeup template](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup.  
+#### 2. Explain how you settled on your final choice of HOG parameters.
 
-Creating a great writeup:
----
-A great writeup should include the rubric points as well as your description of how you addressed each point.  You should include a detailed description of the code used in each step (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  You should include images in your writeup to demonstrate how your code works with examples.  
+After several round of trial and error, the following are the parameters chosen for HOG, Spatial Bins and Color Histograms:-
+      
+      a) Color Channel - RGB
+      b) Orientation bins - 8
+      c) Pixels per cell - 8
+      d) Cells per block - 2
+      e) Histogram Bins - 48
+      f) Histogram Bins Range - (0, 256)
+      g) Spatial Image Size - (16, 16)
+      
+  These parameters are present in **cell no. - 5 of vehicle_detection.ipynb**.
 
-All that said, please be concise!  We're not looking for you to write a book here, just a brief description of how you passed each rubric point, and references to the relevant code :). 
 
-You can submit your writeup in markdown or use another method and submit a pdf instead.
+#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-The Project
----
-
-The goals / steps of this project are the following:
-
-* Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier
-* Optionally, you can also apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector. 
-* Note: for those first two steps don't forget to normalize your features and randomize a selection for training and testing.
-* Implement a sliding-window technique and use your trained classifier to search for vehicles in images.
-* Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
-* Estimate a bounding box for vehicles detected.
-
-Here are links to the labeled data for [vehicle](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/vehicles.zip) and [non-vehicle](https://s3.amazonaws.com/udacity-sdc/Vehicle_Tracking/non-vehicles.zip) examples to train your classifier.  These example images come from a combination of the [GTI vehicle image database](http://www.gti.ssr.upm.es/data/Vehicle_database.html), the [KITTI vision benchmark suite](http://www.cvlibs.net/datasets/kitti/), and examples extracted from the project video itself.   You are welcome and encouraged to take advantage of the recently released [Udacity labeled dataset](https://github.com/udacity/self-driving-car/tree/master/annotations) to augment your training data.  
-
-Some example images for testing your pipeline on single frames are located in the `test_images` folder.  To help the reviewer examine your work, please save examples of the output from each stage of your pipeline in the folder called `ouput_images`, and include them in your writeup for the project by describing what each image shows.    The video called `project_video.mp4` is the video your pipeline should work well on.  
-
-**As an optional challenge** Once you have a working pipeline for vehicle detection, add in your lane-finding algorithm from the last project to do simultaneous lane-finding and vehicle detection!
-
-**If you're feeling ambitious** (also totally optional though), don't stop there!  We encourage you to go out and take video of your own, and show us how you would implement this project on a new video!
+  i) I have trained my classifier using **SVC** function **sklearn.svm**. SVC was chosen instead of LinearSVC because it resulted in increased accuracy. The increase in accuracy was because of the probabilistic output of SVC.
+  
+  ii) The implementation is present in **cell no. - 15, 16 of vehicle_detection.ipynb**.
+  
+  iii) Accuracy Percentage - ** 99.53% **
