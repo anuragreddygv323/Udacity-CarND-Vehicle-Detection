@@ -39,3 +39,12 @@ After several round of trial and error, the following are the parameters chosen 
       g) Spatial Image Size - (16, 16)
       
   These parameters are present in **cell no. - 5 of vehicle_detection.ipynb**.
+
+
+#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
+
+  i) I have trained my classifier using **SVC** function **sklearn.svm**. SVC was chosen instead of LinearSVC because it resulted in increased accuracy. The increase in accuracy was because of the probabilistic output of SVC.
+  
+  ii) The implementation is present in **cell no. - 15, 16 of vehicle_detection.ipynb**.
+  
+  iii) Accuracy Percentage - ** 99.53% **
