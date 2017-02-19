@@ -18,13 +18,13 @@ This project is part of Udacity's Self-Driven Car Nanodegree Program. The aim is
   
   iv) After several round of trial and error, the following are the parameters chosen for HOG, Spatial Bins and Color Histograms:-
       
-      **a) Color Channel - RGB**
-      **b) Orientation bins - 8**  
-      **c) Pixels per cell - 8**
-      **d) Cells per block - 2**
-      **e) Histogram Bins - 48**
-      **f) Histogram Bins Range - (0, 256)**
-      **g) Spatial Image Size - (16, 16)
+      a) Color Channel - RGB
+      b) Orientation bins - 8
+      c) Pixels per cell - 8
+      d) Cells per block - 2
+      e) Histogram Bins - 48
+      f) Histogram Bins Range - (0, 256)
+      g) Spatial Image Size - (16, 16)
       
-     These parameters are present in **cell no. - 5 of vehicle_detection.ipynb**.
+  These parameters are present in **cell no. - 5 of vehicle_detection.ipynb**.
       
