@@ -104,11 +104,11 @@ Heatmaps                   |  Labeled Boxes
 
 To remove False positives :-
 
-i) In ***draw_labeled_bboxes()*** function in **cell no. - 21 of vehicle_detection.ipynb**, I check whether the minimum y-coordinate values is in between 300 and 600. If not, then don't draw the box. Also, minimum x-coordinate value should be less than 1220. One more check of the area of the box has beeen used to remove small False positve boxes. If the area of the box is less than 2500, then don't draw it.
+i) In ***draw_labeled_bboxes()*** function in **cell no. - 21 of vehicle_detection.ipynb**, I check whether the minimum y-coordinate values is in between 300 and 600. If not, then don't draw the box. Also, minimum x-coordinate value should be less than 1220. One more check of the area of the box has been used to remove small False positve boxes. If the area of the box is less than 2500, then don't draw it.
 
 ii) Use of SVC with probabilitic prediction instead of normal LinearSVC also helped in removing many False positives. 
 
-iii) As mentioned in the previous question, heatmaps and thresholding on those heatmaps also help us in removing False positives.
+iii) As mentioned in the previous question, heatmaps and thresholding on those heatmaps also helped in removing False positives.
 
 
 ## Video Implementation
